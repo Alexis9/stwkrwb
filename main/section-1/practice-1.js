@@ -3,12 +3,15 @@
 module.exports = function collectSameElements(collectionA, collectionB) {
     // var array = new Array();
 
-    var array = [];
-  for(var i=0;i<collectionA.length;i++){
-    for(var j=0;j<collectionB.length;j++){
-     if( collectionA[i]==collectionB[j]){
-         array.push(collectionA[i]);
+    var result = [];
+
+    for (var i = 0; i < collectionA.length; i++) {
+        for (var j = 0; j < collectionB.length; j++) {
+            if (collectionA[i] == collectionB[j]) {
+                result.push(collectionA[i]);
+            }
+        }
     }
-  }}
-  return array;
+
+    return result;
 }
